@@ -1,6 +1,21 @@
 # SAFuzz
 This is the repo of **Multiple Targets Directed Greybox Fuzzing: From Reachable to Exploited**.
 
+## How to build
+```bash
+# build fuzzer
+cd fuzz
+make clean all
+cd llvm_mode
+make clean all
+
+# build instrumentor (need llvm10_obj)
+export LLVM_DIR=/your/build/llvm10/obj
+cd instrument
+cmake . -DSVF_DIR=../SVF/
+make
+```
+
 ## How to use
 ```bash
 export SUBJECT=$PWD
