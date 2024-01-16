@@ -1,5 +1,24 @@
 # SAFuzz
 This is the repo of **Multiple Targets Directed Greybox Fuzzing: From Reachable to Exploited**.
+```
+safuzz
+|-- LICENSE
+|-- README.md
+|-- fuzz
+|   |-- afl-fuzz.c   ---------- fuzzer
+|-- gllvm            ---------- gllvm compiler
+|   |-- gclang
+|   |-- gclang++
+|   |-- get-bc
+|   |-- gparse
+|   `-- gsanity-check
+`-- instrument       
+    |-- env.sh       ---------- Required environment variable
+    `-- src
+        |-- CMakeLists.txt
+        `-- cbi.cpp  ---------- instrumentor
+```
+
 
 ## How to build
 ```bash
